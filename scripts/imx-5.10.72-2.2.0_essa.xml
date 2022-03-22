@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+    <include name="imx-5.10.72-2.2.0.xml" />
+
+    <remote fetch="https://github.com/bgnetworks" name="bgnetworks" />
+
+    <project name="meta-mender-imx8mm" remote="bgnetworks" revision="hardknott" path="sources/meta-essa-mx8mm">
+        <linkfile src="scripts/mx8mm-setup-essa.sh" dest="mx8mm-setup-essa.sh" />
+    </project>
+
+</manifest>
