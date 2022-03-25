@@ -30,7 +30,7 @@ sudo cp ~/repo /usr/bin
 
 For other supported Linux distributions, please refer to the [Yocto Project Reference Manual](https://www.yoctoproject.org/docs/current/ref-manual/ref-manual.html#detailed-supported-distros).
 
-# 2. Yocto build
+# 3. Yocto build
 
 The following outlines the steps needed build the core image using Yocto with BGN-ESSA.
 
@@ -77,10 +77,15 @@ Build the core image:
 ```bash
 bitbake core-image-base
 ```
+The following build configurations should be displayed in the terminal:
+
+<p align="left">
+    <img src="assets/Build_configuration.png" alt="Build_configuration" />
+</p>
 
 **Note**: _The initial image build might take a few hours_
 
-# 4. Program the image into the board SD-card
+# 4. Program the image into the board eMMC
 
 Install uuu tool:
 
@@ -110,7 +115,17 @@ Set the i.<d/>MX 8MM EVKboard to serial download protocol (_SDP_) mode by config
 | **Serial Download Mode** |    1010XXXXXX     |   XXXXXXXXX0    |
 
 **TABLE 1**: Boot mode selection switches on i.<d/>MX 8MM EVK 
+1 denotes ON, 0 denotes OFF and x denotes Don’t care
 
+Connect the board (J301 USB OTG connector) to the build machine with Type C-Micro USB cable:
+
+<p align="left">
+    <img src="assets/MX8MM - front view.png" alt="MX8MM - front view" />
+</p>
+
+<p align="left">
+    <img src="assets/MX8MM - bottom view.png" alt="MX8MM - bottom view" />
+</p>
 ---
 
 Power up the board and confirm the board has been set up correctly:
